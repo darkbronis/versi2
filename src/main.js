@@ -287,7 +287,7 @@ class LINE extends LineAPI {
         }
 
 			  if(txt == 'status bot') {
-					  this._sendMessage(seq,`| Bot : WORKING\n\n| Bot Version : 1-2-3\n\n| Owner : line.me/ti/p/~fahmiadrn\n\n========₡•∅•₮========\n${JSON.stringify(this.stateStatus)}`);
+					  this._sendMessage(seq,`| Bot : WORKING\n\n| Owner : line.me/ti/p/~khalik02\n\n========₡•∅•₮========\n${JSON.stringify(this.stateStatus)}`);
 				}
 					
         if(txt == 'gcreator' && isAdminOrBot(seq.from)) {
