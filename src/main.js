@@ -2,7 +2,7 @@ const LineAPI = require('./api');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
-const myBot = ['u7b8f35567fee016d196112004b6e3573','u6b39c1ff2dfa8396706ef56ddd9f1e89','u537cd3fc00f69ae4876c0c1a330468d0','u284a00111c0fa26e742da1c1f3e9dcbc'];
+const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6'];
 
 
 function isAdminOrBot(param) {
@@ -173,7 +173,7 @@ class LINE extends LineAPI {
             //this._sendMessage(seq,`Status: \n${JSON.stringify(this.stateStatus)}`);
       this._sendMessage(seq,isinya);
         } else {
-            this._sendMessage(seq,`you must have permission`);
+            this._sendMessage(seq,`Kamu bukan Admin`);
         }}
     }
   
@@ -292,11 +292,11 @@ class LINE extends LineAPI {
        //     await this._updateGroup(qrprotect);
     //    }
       
-        if(txt == 'respon') {
-            this._sendMessage(seq, '₡•∅•₮\n\n|V.1 Active|');
+        if(txt == 'responsename' && isAdminOrBot(seq.from)) {
+            this._sendMessage(seq, 'Lexy Here, My Lord');
         }
 
-        if(txt == 'cot keyword' || txt == 'cot help' || txt == 'cot key') {
+        if(txt == 'key' && isAdminOrBot(seq.from)) {
 	          this._sendMessage(seq, '===============\n|₡•∅•₮|\n|For All User|\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ respon\n∆ Connection\n∆ Reader\n∆ Reset Read\n∆ Check Read\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|₡•∅•₮|\n|Admin User|\n===============\n√• Delete @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• Konspirasi\n√• TagMember\n√• Up\n√• CotBye\n===============\n₡yber•∅peration•₮eam\nKeep Support:)\n===============');
         }
 
@@ -304,14 +304,14 @@ class LINE extends LineAPI {
 					  this._sendMessage(seq,`| Bot : WORKING\n\n| Bot Version : 1-2-3\n\n| Owner : line.me/ti/p/~fahmiadrn\n\n========₡•∅•₮========\n${JSON.stringify(this.stateStatus)}`);
 				}
 					
-        if(txt == 'gcreator') {
+        if(txt == 'gcreator' && isAdminOrBot(seq.from)) {
             let creator = group.creator.mid;
             seq.contentType = 13
             seq.contentMetadata = { mid: `${creator}` };
             this._client.sendMessage(1, seq);
         }
       
-        if(txt == 'ginfo') {
+        if(txt == 'ginfo' && isAdminOrBot(seq.from)) {
             let name = group.name;
             let id = group.id;
             let creator = group.creator.displayName;
@@ -323,24 +323,24 @@ class LINE extends LineAPI {
       
         if(txt == 'creator') {
             seq.contentType = 13
-            seq.contentMetadata = { mid: 'u7b8f35567fee016d196112004b6e3573' };
+            seq.contentMetadata = { mid: 'ufdb348d53532a57228f045ecfaa00f8d' };
             this._client.sendMessage(1, seq);
         }
       
-        if(txt == 'me') {
+        if(txt == 'me' && isAdminOrBot(seq.from)) {
     	      seq.contentType= 13
             seq.contentMetadata = { mid: seq.from };
             this._client.sendMessage(1, seq);
         }
           
-        if(txt == 'connection') {
+        if(txt == 'speed' && isAdminOrBot(seq.from)) {
             const curTime = (Date.now() / 1000);
             await this._sendMessage(seq,'Checking Connection....');
             const rtime = (Date.now() / 1000) - curTime;
             await this._sendMessage(seq, `${rtime} second(s)`);
         }
 
-        if(txt == 'today') {
+        if(txt == 'today' && isAdminOrBot(seq.from)) {
             let menit = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','00'];
             let jam = ['11','12','13','14','15','16','17','18','19','20','21','22','23','00','01','02','03','04','05','06','07','08','09','10','11'];
             let hh = jam[date.getHours()];
@@ -349,7 +349,7 @@ class LINE extends LineAPI {
             this._sendMessage(seq, `📌 Pukul, ${hh} : ${mm} : ${ss} WIB\n\n🌍 ${hariIni}, ${tanggal} ${bulan} ${tahun}`);
         }
           
-        if(txt == 'konspirasi' && isAdminOrBot(seq.from)) {
+        if(txt == 'kick all' && isAdminOrBot(seq.from)) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(isAdminOrBot(listMember[i].mid)){
@@ -358,12 +358,12 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'reader') {
-            this._sendMessage(seq, `Check Reader Point set!`);
+        if(txt == 'set' && isAdminOrBot(seq.from)) {
+            this._sendMessage(seq, `Check Point sudah di set`);
             this.removeReaderByGroup(seq.to);
         }
 
-        if(txt == 'reset read') {
+        if(txt == 'reset read' && isAdminOrBot(seq.from)) {
             this.checkReader = []
             this._sendMessage(seq, `Check Reader Point reset!`);
         }
@@ -377,7 +377,7 @@ class LINE extends LineAPI {
         }
 
 			
-        if(txt == 'check read'){
+        if(txt == 'check' && isAdminOrBot(seq.from)){
             let rec = await this.check(this.checkReader,seq.to);
             const mentions = await this.mention(rec);
             seq.contentMetadata = mentions.cmddata;
@@ -395,7 +395,7 @@ class LINE extends LineAPI {
             this.setState(seq)
         }
 	
-        if(cmd == 'delete' && isAdminOrBot(seq.from)) {
+        if(cmd == 'enyahkan' && isAdminOrBot(seq.from)) {
           let target = payload.replace('@','');
           let group = await this._getGroups([seq.to]);
           let gm = group[0].members;
@@ -419,18 +419,18 @@ class LINE extends LineAPI {
             if(txt == 'openurl') {
                 updateGroup.preventJoinByTicket = false;
                 const groupUrl = await this._reissueGroupTicket(seq.to)
-                this._sendMessage(seq, `QR Code = line://ti/g/${groupUrl}`);
+                this._sendMessage(seq, `LINE QR Code = line://ti/g/${groupUrl}`);
             }
             await this._updateGroup(updateGroup);
         }
 
         if(cmd == 'up' && isAdminOrBot(seq.from)) {
             for(var i= 0; i < 4;  i++) {
-               this._sendMessage(seq, 'Berbau Micin nih\n\n\n\n\n\n\n\n\n\nDududududd (^-^)');
+               this._sendMessage(seq, 'LoL');
             }
         }
       
-        if(txt == 'gift') {
+        if(txt == 'gift' && isAdminOrBot(seq.from)) {
            	seq.contentType = 9
             seq.contentMetadata = {'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '6'};
             this._client.sendMessage(1, seq);
@@ -442,19 +442,19 @@ class LINE extends LineAPI {
             await this._acceptGroupInvitationByTicket(id,ticketId);
         }
         
-        if(cmd == 'spm' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spm <mid>
+        if(cmd == 'spam' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spam <mid>
             for (var i = 0; i < 100; i++) {
                 this._createGroup(`SysTeM INV SPAM`,payload);
                 this._inviteMid(seq.to)
             }
         }
         
-        if(txt == 'cotbye'  && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
-            let txt = await this._sendMessage(seq,'We Gonna Leaveeeeeee~~~~\nRun\n\nThx For Using (×-×)');
+        if(txt == 'leave'  && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
+            let txt = await this._sendMessage(seq,'Bye Bye, Dont Cry I will be back');
             this._leaveGroup(seq.to);
         }
 			
-        if(txt == 'leave' && isAdminOrBot(seq.from)) {
+        if(txt == 'Go away' && isAdminOrBot(seq.from)) {
             this._leaveGroup(seq.to);
         }
 
