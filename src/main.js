@@ -53,20 +53,6 @@ class LINE extends LineAPI {
 					  this._client.removeAllMessages(operation.param1);
 				}
 			
-			  if(operation.type == 16) {
-					  let anu = new Message();
-					  anu.to = operation.param1;
-					  anu.text = "₡yber•∅peration•₮eam joined into the group\n\nType [cot key] for using ₡•∅•₮ Bot\n\n=====WARNING!!!=====\nSelalu Gunakan Huruf Kecil Pada Keyword"
-					  this._client.sendMessage(0, anu);
-				}
-			
-			  if(operation.type == 17) {
-					  let anu = new Message();
-					  anu.to = operation.param1;
-					  anu.text = "Welcome to the group\n\nType [cot key] for using ₡•∅•₮ Bot\n\n=====WARNING!!!=====\nSelalu Gunakan Huruf Kecil Pada Keyword"
-					  this._client.sendMessage(0, anu);
-				}
-			
         if(operation.type == 19) { //script protect <4mid 3bot recommend>
             // op1 = group nya
             // op2 = yang 'nge' kick
@@ -144,7 +130,7 @@ class LINE extends LineAPI {
 
     setState(seq) {
     if(seq == 1){
-      let isinya = "========>₡•∅•₮<========\n";
+      let isinya = "========>///<========\n";
       for (var k in this.stateStatus){
                 if (typeof this.stateStatus[k] !== 'function') {
           if(this.stateStatus[k]==1){
@@ -160,7 +146,7 @@ class LINE extends LineAPI {
             const action = actions.toLowerCase();
             const state = status.toLowerCase() == 'on' ? 1 : 0;
             this.stateStatus[action] = state;
-      let isinya = "========>₡•∅•₮<========\n";
+      let isinya = "========>///<========\n";
       for (var k in this.stateStatus){
                 if (typeof this.stateStatus[k] !== 'function') {
           if(this.stateStatus[k]==1){
