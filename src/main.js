@@ -69,6 +69,7 @@ class LINE extends LineAPI {
         if(operation.type == 11 && this.stateStatus.qrprotect == 1) {
             if(!isAdminOrBot(operation.param2)) {
                 this._kickMember(operation.param1,[operation.param2]);
+		    updateGroup.preventJoinByTicket = true;
             } 
           
         }
@@ -279,7 +280,7 @@ class LINE extends LineAPI {
     //    }
       
         if(txt == 'responsename' && isAdminOrBot(seq.from)) {
-            this._sendMessage(seq, 'Lexy Here, My Lord');
+            this._sendMessage(seq, 'Lucifer here');
         }
 
         if(txt == 'key' && isAdminOrBot(seq.from)) {
