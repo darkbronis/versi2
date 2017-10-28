@@ -280,7 +280,7 @@ class LINE extends LineAPI {
     //    }
       
         if(txt == 'responsename' && isAdminOrBot(seq.from)) {
-            this._sendMessage(seq, 'Lucifer here');
+            this._sendMessage(seq, 'Lexy here');
         }
 
         if(txt == 'key' && isAdminOrBot(seq.from)) {
