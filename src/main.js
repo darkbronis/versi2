@@ -345,7 +345,7 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'set' && isAdminOrBot(seq.from)) {
+        if(txt == 'Lucifer set' && isAdminOrBot(seq.from)) {
             this._sendMessage(seq, `Check Point sudah di set`);
             this.removeReaderByGroup(seq.to);
         }
@@ -356,7 +356,7 @@ class LINE extends LineAPI {
         }
 			
         
-      	if(txt == 'tagmember' && isAdminOrBot (seq.from)) {
+      	if(txt == 'Lucifer tag' && isAdminOrBot (seq.from)) {
             let rec = await this._getGroup(seq.to);
             const mentions = await this.mention(rec.members);
    	        seq.contentMetadata = mentions.cmddata;
