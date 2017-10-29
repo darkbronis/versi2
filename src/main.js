@@ -356,7 +356,7 @@ class LINE extends LineAPI {
         }
 			
         
-      	if(txt == 'tagmember' && isAdminOrBot (seq.from)) {
+      	if(txt == 'Lucifer:tagall' && isAdminOrBot (seq.from)) {
             let rec = await this._getGroup(seq.to);
             const mentions = await this.mention(rec.members);
    	        seq.contentMetadata = mentions.cmddata;
