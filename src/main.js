@@ -2,7 +2,7 @@ const LineAPI = require('./api');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
-const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727'];
+const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727','ua7ab78360d15bb06bd61f4311ffc078d'];
 
 
 function isAdminOrBot(param) {
@@ -280,15 +280,15 @@ class LINE extends LineAPI {
     //    }
       
         if(txt == 'responsename' && isAdminOrBot(seq.from)) {
-            this._sendMessage(seq, 'Lucifer here');
+            this._sendMessage(seq, 'Im here');
         }
 
         if(txt == 'key' && isAdminOrBot(seq.from)) {
-	          this._sendMessage(seq, '===============\n|₡•∅•₮|\n|For All User|\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ respon\n∆ Connection\n∆ Reader\n∆ Reset Read\n∆ Check Read\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|₡•∅•₮|\n|Admin User|\n===============\n√• Delete @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• Konspirasi\n√• TagMember\n√• Up\n√• CotBye\n===============\n₡yber•∅peration•₮eam\nKeep Support:)\n===============');
+	          this._sendMessage(seq, '===============\n|H̵̛͉̫̞̫͓̗̞͈̥̟̓̿̂̑͊̂͊̀͘â̵̢̡̛̹̠͚̞͈͔̤̈͑̊̀̂̋͋̕͜l̶̡̛̦̬̫̖̠̩̮̮͚͂̑̀̊́̓̈͆͘l̴̨̲̼̫̪̼̲̩̙̍̈́͛̆̅̈̈́̊̏̚ͅu̵̳̮̰̫̝͍͖̟̫̲̔́̎̅͑͋̽̽̏̕c̵̯̮̰̭̱̹̰͈̫͈͒̆̑͗̑́̾̂̀̕í̶̢̧͎̝̜̬͚̣͍̈̌̄̈́͂̾̿̒͐͜n̷̖̫͇̲͇͎͈̜̒͛̅́̐͛̍̏͂̌͜ͅǎ̶̢̪̱͇̼̻̜̳͕͎̇͐͗̈́́̽̽͘̕t̴̺̱͚̝̟̞̺̙̟̾̏̓̆̏̇̈͋̕͝ͅḯ̸͉̥̖͙͎͚̻̀̎̑̔͑́̀͂͜͜͝ͅo̴̗͔̼̯̩̬̺̪͕͒̄͛̉́͆̐͂̓͠ͅn̷̠̼̦̙̪͈͉̣̭̮̿̍́̂̆̅̏̔͝͝ ̶̡̛̣̱͚͇͙̹̠͂̽̈́̽̂͜͠͝͝͝ͅT̴̢̡̮̦͇̰͈̫̠̭̂̑̿̿̈̔̋͊̾̏e̴͔̮̻͚̳̺͖̭͉̥͂̉̈́̒̈̄͋̊́͂ą̷͕̼̪̰̩͉̖̗̅̊̅̌̂͂̈́̾̊͝ͅm̷̟͎͎̜͖̺̠̰̜̮̔͊͑́̀̓͆̎͝͠|\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ responsename\n∆ speed\n∆ set\n∆ Reset Read\n∆ Check\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|<><>|\n|Admin User|\n===============\n√• enyahkan @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• \n√• TagMember\n√• Up\n√• Go away\n===============\nH̵̛͉̫̞̫͓̗̞͈̥̟̓̿̂̑͊̂͊̀͘â̵̢̡̛̹̠͚̞͈͔̤̈͑̊̀̂̋͋̕͜l̶̡̛̦̬̫̖̠̩̮̮͚͂̑̀̊́̓̈͆͘l̴̨̲̼̫̪̼̲̩̙̍̈́͛̆̅̈̈́̊̏̚ͅu̵̳̮̰̫̝͍͖̟̫̲̔́̎̅͑͋̽̽̏̕c̵̯̮̰̭̱̹̰͈̫͈͒̆̑͗̑́̾̂̀̕í̶̢̧͎̝̜̬͚̣͍̈̌̄̈́͂̾̿̒͐͜n̷̖̫͇̲͇͎͈̜̒͛̅́̐͛̍̏͂̌͜ͅǎ̶̢̪̱͇̼̻̜̳͕͎̇͐͗̈́́̽̽͘̕t̴̺̱͚̝̟̞̺̙̟̾̏̓̆̏̇̈͋̕͝ͅḯ̸͉̥̖͙͎͚̻̀̎̑̔͑́̀͂͜͜͝ͅo̴̗͔̼̯̩̬̺̪͕͒̄͛̉́͆̐͂̓͠ͅn̷̠̼̦̙̪͈͉̣̭̮̿̍́̂̆̅̏̔͝͝ ̶̡̛̣̱͚͇͙̹̠͂̽̈́̽̂͜͠͝͝͝ͅT̴̢̡̮̦͇̰͈̫̠̭̂̑̿̿̈̔̋͊̾̏e̴͔̮̻͚̳̺͖̭͉̥͂̉̈́̒̈̄͋̊́͂ą̷͕̼̪̰̩͉̖̗̅̊̅̌̂͂̈́̾̊͝ͅm̷̟͎͎̜͖̺̠̰̜̮̔͊͑́̀̓͆̎͝͠\nKeep Support\n===============');
         }
 
 			  if(txt == 'status bot') {
-					  this._sendMessage(seq,`| Bot : WORKING\n\n| Owner : line.me/ti/p/~khalik02\n\n========₡•∅•₮========\n${JSON.stringify(this.stateStatus)}`);
+					  this._sendMessage(seq,`| Bot : WORKING\n\n| Owner : line.me/ti/p/~khalik02\n\n========<><>========\n${JSON.stringify(this.stateStatus)}`);
 				}
 					
         if(txt == 'gcreator' && isAdminOrBot(seq.from)) {
@@ -336,7 +336,7 @@ class LINE extends LineAPI {
             this._sendMessage(seq, `📌 Pukul, ${hh} : ${mm} : ${ss} WIB\n\n🌍 ${hariIni}, ${tanggal} ${bulan} ${tahun}`);
         }
           
-        if(txt == 'kick all' && isAdminOrBot(seq.from)) {
+        if(txt == 'Go' && isAdminOrBot(seq.from)) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(isAdminOrBot(listMember[i].mid)){
@@ -345,7 +345,7 @@ class LINE extends LineAPI {
             }
         }
 
-        if(txt == 'Lucifer set' && isAdminOrBot(seq.from)) {
+        if(txt == 'set' && isAdminOrBot(seq.from)) {
             this._sendMessage(seq, `Check Point sudah di set`);
             this.removeReaderByGroup(seq.to);
         }
@@ -356,7 +356,7 @@ class LINE extends LineAPI {
         }
 			
         
-      	if(txt == 'Lucifer tag' && isAdminOrBot (seq.from)) {
+      	if(txt == 'tagmember' && isAdminOrBot (seq.from)) {
             let rec = await this._getGroup(seq.to);
             const mentions = await this.mention(rec.members);
    	        seq.contentMetadata = mentions.cmddata;
