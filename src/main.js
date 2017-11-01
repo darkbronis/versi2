@@ -2,7 +2,7 @@ const LineAPI = require('./api');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
-const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727','ua7ab78360d15bb06bd61f4311ffc078d'];
+const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727','ua7ab78360d15bb06bd61f4311ffc078d','u0db0acb862af364edda273a975ee589b'];
 
 
 function isAdminOrBot(param) {
@@ -279,12 +279,12 @@ class LINE extends LineAPI {
        //     await this._updateGroup(qrprotect);
     //    }
       
-        if(txt == 'responsename' && isAdminOrBot(seq.from)) {
-            this._sendMessage(seq, 'Im here');
+        if(txt == 'Absen' && isAdminOrBot(seq.from)) {
+            this._sendMessage(seq, 'Im here, Aizen-Sama');
         }
 
         if(txt == 'key' && isAdminOrBot(seq.from)) {
-	          this._sendMessage(seq, '===============\n|H̵̛͉̫̞̫͓̗̞͈̥̟̓̿̂̑͊̂͊̀͘â̵̢̡̛̹̠͚̞͈͔̤̈͑̊̀̂̋͋̕͜l̶̡̛̦̬̫̖̠̩̮̮͚͂̑̀̊́̓̈͆͘l̴̨̲̼̫̪̼̲̩̙̍̈́͛̆̅̈̈́̊̏̚ͅu̵̳̮̰̫̝͍͖̟̫̲̔́̎̅͑͋̽̽̏̕c̵̯̮̰̭̱̹̰͈̫͈͒̆̑͗̑́̾̂̀̕í̶̢̧͎̝̜̬͚̣͍̈̌̄̈́͂̾̿̒͐͜n̷̖̫͇̲͇͎͈̜̒͛̅́̐͛̍̏͂̌͜ͅǎ̶̢̪̱͇̼̻̜̳͕͎̇͐͗̈́́̽̽͘̕t̴̺̱͚̝̟̞̺̙̟̾̏̓̆̏̇̈͋̕͝ͅḯ̸͉̥̖͙͎͚̻̀̎̑̔͑́̀͂͜͜͝ͅo̴̗͔̼̯̩̬̺̪͕͒̄͛̉́͆̐͂̓͠ͅn̷̠̼̦̙̪͈͉̣̭̮̿̍́̂̆̅̏̔͝͝ ̶̡̛̣̱͚͇͙̹̠͂̽̈́̽̂͜͠͝͝͝ͅT̴̢̡̮̦͇̰͈̫̠̭̂̑̿̿̈̔̋͊̾̏e̴͔̮̻͚̳̺͖̭͉̥͂̉̈́̒̈̄͋̊́͂ą̷͕̼̪̰̩͉̖̗̅̊̅̌̂͂̈́̾̊͝ͅm̷̟͎͎̜͖̺̠̰̜̮̔͊͑́̀̓͆̎͝͠|\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ responsename\n∆ speed\n∆ set\n∆ Reset Read\n∆ Check\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|<><>|\n|Admin User|\n===============\n√• enyahkan @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• \n√• TagMember\n√• Up\n√• Go away\n===============\nH̵̛͉̫̞̫͓̗̞͈̥̟̓̿̂̑͊̂͊̀͘â̵̢̡̛̹̠͚̞͈͔̤̈͑̊̀̂̋͋̕͜l̶̡̛̦̬̫̖̠̩̮̮͚͂̑̀̊́̓̈͆͘l̴̨̲̼̫̪̼̲̩̙̍̈́͛̆̅̈̈́̊̏̚ͅu̵̳̮̰̫̝͍͖̟̫̲̔́̎̅͑͋̽̽̏̕c̵̯̮̰̭̱̹̰͈̫͈͒̆̑͗̑́̾̂̀̕í̶̢̧͎̝̜̬͚̣͍̈̌̄̈́͂̾̿̒͐͜n̷̖̫͇̲͇͎͈̜̒͛̅́̐͛̍̏͂̌͜ͅǎ̶̢̪̱͇̼̻̜̳͕͎̇͐͗̈́́̽̽͘̕t̴̺̱͚̝̟̞̺̙̟̾̏̓̆̏̇̈͋̕͝ͅḯ̸͉̥̖͙͎͚̻̀̎̑̔͑́̀͂͜͜͝ͅo̴̗͔̼̯̩̬̺̪͕͒̄͛̉́͆̐͂̓͠ͅn̷̠̼̦̙̪͈͉̣̭̮̿̍́̂̆̅̏̔͝͝ ̶̡̛̣̱͚͇͙̹̠͂̽̈́̽̂͜͠͝͝͝ͅT̴̢̡̮̦͇̰͈̫̠̭̂̑̿̿̈̔̋͊̾̏e̴͔̮̻͚̳̺͖̭͉̥͂̉̈́̒̈̄͋̊́͂ą̷͕̼̪̰̩͉̖̗̅̊̅̌̂͂̈́̾̊͝ͅm̷̟͎͎̜͖̺̠̰̜̮̔͊͑́̀̓͆̎͝͠\nKeep Support\n===============');
+	          this._sendMessage(seq, '===============\n|♞♞♞ɆsᵽȺđȺ ŦɇȺm Ƀøŧ ♞♞♞\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ responsename\n∆ speed\n∆ set\n∆ Reset Read\n∆ Check\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|<><>|\n|Admin User|\n===============\n√• enyahkan @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• \n√• TagMember\n√• Up\n√• Go away\n===============\n♞♞♞ɆsᵽȺđȺ ŦɇȺm Ƀøŧ ♞♞♞\nKeep Support\n===============');
         }
 
 			  if(txt == 'status bot') {
@@ -436,7 +436,7 @@ class LINE extends LineAPI {
             }
         }
         
-        if(txt == 'leave'  && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
+        if(txt == 'team2leave'  && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
             let txt = await this._sendMessage(seq,'Bye Bye, Dont Cry I will be back');
             this._leaveGroup(seq.to);
         }
