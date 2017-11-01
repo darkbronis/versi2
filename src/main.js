@@ -279,7 +279,7 @@ class LINE extends LineAPI {
        //     await this._updateGroup(qrprotect);
     //    }
       
-        if(txt == 'Absen' && isAdminOrBot(seq.from)) {
+        if(txt == 'responsename' && isAdminOrBot(seq.from)) {
             this._sendMessage(seq, 'Im here, Aizen-Sama');
         }
 
