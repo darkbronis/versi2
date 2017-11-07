@@ -2,7 +2,7 @@ const LineAPI = require('./api');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
-const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727','ua7ab78360d15bb06bd61f4311ffc078d','u0db0acb862af364edda273a975ee589b'];
+const myBot = ['u3da36828456aed83d82b011ca8ded1df'];
 
 
 function isAdminOrBot(param) {
@@ -310,7 +310,7 @@ class LINE extends LineAPI {
       
         if(txt == 'creator') {
             seq.contentType = 13
-            seq.contentMetadata = { mid: 'ufdb348d53532a57228f045ecfaa00f8d' };
+            seq.contentMetadata = { mid: 'u3da36828456aed83d82b011ca8ded1df' };
             this._client.sendMessage(1, seq);
         }
       
