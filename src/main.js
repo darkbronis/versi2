@@ -2,7 +2,7 @@ const LineAPI = require('./api');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
-const myBot = ['u3da36828456aed83d82b011ca8ded1df'];
+const myBot = ['u08124dd7fc3ce40d4d7ffff9533653a9'];
 
 
 function isAdminOrBot(param) {
@@ -280,15 +280,15 @@ class LINE extends LineAPI {
     //    }
       
         if(txt == 'responsename' && isAdminOrBot(seq.from)) {
-            this._sendMessage(seq, 'Im here, Aizen-Sama');
+            this._sendMessage(seq, 'Annabelle here, ');
         }
 
         if(txt == 'key' && isAdminOrBot(seq.from)) {
-	          this._sendMessage(seq, '===============\n|♞♞♞ɆsᵽȺđȺ ŦɇȺm Ƀøŧ ♞♞♞\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ responsename\n∆ speed\n∆ set\n∆ Reset Read\n∆ Check\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|<><>|\n|Admin User|\n===============\n√• enyahkan @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• \n√• TagMember\n√• Up\n√• Go away\n===============\n♞♞♞ɆsᵽȺđȺ ŦɇȺm Ƀøŧ ♞♞♞\nKeep Support\n===============');
+	          this._sendMessage(seq, '===============\n|♞♞♞Annabelle Command ♞♞♞\n===============\n∆ Creator\n∆ Me\n∆ thisCancel\n∆ responsename\n∆ speed\n∆ set\n∆ Reset Read\n∆ Check\n∆ gCreator\n∆ gInfo\n∆ Today\n∆ Status Bot\n∆ Myid\n∆ Gift\n∆ Join <linkGroup>\n\n===============\n|<><>|\n|Admin User|\n===============\n√• enyahkan @\n√• KickersProtect on/off\n√• CancelProtect on/off\n√• QrProtect on/off\n√• Openurl\n√• Closeurl\n√• \n√• TagMember\n√• Up\n√• Go away\n===============\n♞♞♞Annabelle Team ♞♞♞\nKeep Support\n===============');
         }
 
 			  if(txt == 'status bot') {
-					  this._sendMessage(seq,`| Bot : WORKING\n\n| Owner : line.me/ti/p/~khalik02\n\n========<><>========\n${JSON.stringify(this.stateStatus)}`);
+					  this._sendMessage(seq,`| Bot : WORKING\n\n| Owner : line.me/ti/p/~Eprillya\n\n========<><>========\n${JSON.stringify(this.stateStatus)}`);
 				}
 					
         if(txt == 'gcreator' && isAdminOrBot(seq.from)) {
@@ -310,7 +310,7 @@ class LINE extends LineAPI {
       
         if(txt == 'creator') {
             seq.contentType = 13
-            seq.contentMetadata = { mid: 'u3da36828456aed83d82b011ca8ded1df' };
+            seq.contentMetadata = { mid: 'u08124dd7fc3ce40d4d7ffff9533653a9' };
             this._client.sendMessage(1, seq);
         }
       
@@ -436,7 +436,7 @@ class LINE extends LineAPI {
             }
         }
         
-        if(txt == 'team2leave'  && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
+        if(txt == 'leave'  && isAdminOrBot(seq.from)) { //untuk left dari group atau spam group contoh left <alfath>
             let txt = await this._sendMessage(seq,'Bye Bye, Dont Cry I will be back');
             this._leaveGroup(seq.to);
         }
