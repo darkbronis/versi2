@@ -8,14 +8,14 @@ let exec = require('child_process').exec;
 
 var myStaff = [];//Gosah Diisi Mid
 
-const myAdmin = [''];//Taro Mid Lu Disini Gblk
+const myAdmin = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727','ua7ab78360d15bb06bd61f4311ffc078d','u0db0acb862af364edda273a975ee589b','u0d3300929098eab5efb923ac32f8f7e3','u3c239a612e44e23e5ba887045dbbaa60','ubbc139cd574b65ec09610bf0f7cedfb1','u3e7a636610c82444e42a77384887441a','uf53069091adb4bad3b31bc516daa1086'];//Taro Mid Lu Disini Gblk
 
 const myAssist = [];//Kosongin Aja Ini Gaguna Kntl
 
-const myBot = [''];//Taro Mid Bot Lu Disini Kntl
+const myBot = ['ufdb348d53532a57228f045ecfaa00f8d','ue5060e54a4ed380dcafd0a2213592ad0','ua044c625da53442ff1040e30bfb1ee28','u93c7c5d46bc99b92c09faede05b7e8b6','u6660a5ab23e58650e107243d706ae727','ua7ab78360d15bb06bd61f4311ffc078d','u0db0acb862af364edda273a975ee589b','u0d3300929098eab5efb923ac32f8f7e3','u3c239a612e44e23e5ba887045dbbaa60','ubbc139cd574b65ec09610bf0f7cedfb1','u3e7a636610c82444e42a77384887441a','uf53069091adb4bad3b31bc516daa1086'];//Taro Mid Bot Lu Disini Kntl
 var banList = [];//Banned list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
-var komenTL = "AutoLike by Bee\nline://ti/p/~kobe2k17"; //Comment for timeline
+var komenTL = "AutoLike by Espada Team\nline://ti/p/~khalik02"; //Comment for timeline
 var bcText = "Masukan teks untuk broadcast";//Jan Diganti//
 var limitposts = '10'; //Output timeline post
 
@@ -61,7 +61,7 @@ class LINE extends LineAPI {
             lockupdategroup: 0,
             lockjoin: 0,
             lockcancel: 1,
-            kick:1,
+            bankaimode:1,
             cancel: 1,
             bmsg: 1,
         }
